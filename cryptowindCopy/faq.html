@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en" class="a0">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+        Crypto Wind - FAQ
+    </title>
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+
+    <link rel="stylesheet" href="css/glightbox.min.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="css/apexcharts.css" />
+    <link rel="stylesheet" href="css/main.css" />
+
+    <script defer src="js/alpine.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script>
+        // ===== wow js
+        new WOW().init();
+    </script>
+</head>
+
+<body x-data="
+      {
+        scrolledFromTop: false
+      }
+    " x-init="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
+    @scroll.window="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false" class="a1 dark:a2">
+
+    <header x-data="
+        {
+          navbarOpen: false,
+          dropdownOpen: false
+        }
+      " :class="scrolledFromTop ? 'a1 dark:a3 a4 dark:a4 a5 a6 ' : ' a7 dark:a7' " class="a8 a9 aa ab ac ad">
+        <div class="ae">
+            <div class="af ag aa ac ah">
+                <div class="ai aj ak">
+                    <a href="index.html" :class="scrolledFromTop && '!al lg:!am' " class="an ab a2h lg:aW">
+                        <img src="images/logo/logo.svg" alt="logo" class="ab dark:ao" />
+                        <img src="images/logo/logo-white.svg" alt="logo" class="ao ab dark:an" />
+                    </a>
+                </div>
+
+                <div class="aa ab ac ap ak">
+                    <div>
+                        <button @click="navbarOpen = !navbarOpen" :class="navbarOpen && 'navbarTogglerActive' "
+                            id="navbarToggler" class="aq ar as/2 an at/2 au av aw[6px] ax focus:ay lg:ao">
+                            <span :class="navbarOpen && 'az aA[7px]' "
+                                class="af aB[6px] an aC[2px] aD[30px] a2 dark:a1"></span>
+                            <span :class="navbarOpen && 'aE' " class="af aB[6px] an aC[2px] aD[30px] a2 dark:a1"></span>
+                            <span :class="navbarOpen && 'aA[-8px] aF[135deg]' "
+                                class="af aB[6px] an aC[2px] aD[30px] a2 dark:a1"></span>
+                        </button>
+                        <nav :class="!navbarOpen && 'ao' " id="navbarCollapse"
+                            class="aq ar aG ab aH[250px] au a1 al aI aJ dark:a2 lg:aK lg:an lg:ab lg:aj lg:a7 lg:aL lg:aM dark:lg:a7">
+                            <ul class="aN lg:aa">
+                                <li>
+                                    <a href="index.html" class="aa am aO aP aQ hover:aR dark:aS dark:hover:aT lg:aU lg:aV lg:aW xl:aX 2xl:aY">
+                                        Home
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="about.html"
+                                        class="aa am aO aP aQ hover:aR dark:aS dark:hover:aT lg:aU lg:aV lg:aW xl:aX 2xl:aY">
+                                        About
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="plans.html"
+                                        class="aa am aO aP aQ hover:aR dark:aS dark:hover:aT lg:aU lg:aV lg:aW xl:aX 2xl:aY">
+                                        Plans
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="terms.html"
+                                        class="aa am aO aP aQ hover:aR dark:aS dark:hover:aT lg:aU lg:aV lg:aW xl:aX 2xl:aY">
+                                        Terms
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="support.html"
+                                        class="aa am aO aP aQ hover:aR dark:aS dark:hover:aT lg:aU lg:aV lg:aW xl:aX 2xl:aY">
+                                        Support
+                                    </a>
+                                </li>
+                                <li class="aZ submenu-item af aQ dark:aS">
+                                    <a href="javascript:void(0)" @click="dropdownOpen = !dropdownOpen"
+                                        class="af aa am aO aP aR after:aq after:a_ after:as/2 after:a10[-2px] after:a11 after:a12 after:a13[-50%] after:az after:a14 after:a15 after:a16 group-hover:aR dark:aT dark:group-hover:aT lg:aU lg:aV lg:aW lg:a17 lg:a18 lg:after:a19 xl:aX 2xl:aY">
+                                        Pages
+                                    </a>
+                                    <div :class="dropdownOpen ? 'an' : 'ao lg:an ' "
+                                        class="submenu af aG a1a au a1 a1b[top] a1c group-hover:a1d dark:a2 lg:a1e lg:aq lg:aA[115%] lg:aD[250px] lg:a1f lg:aE lg:a1g lg:group-hover:a1h lg:group-hover:aG">
+                                        <a href="signin.html"
+                                            class="an a1i aw[10px] a1j a1k hover:aR dark:aT dark:hover:aR lg:ak">
+                                            Login
+                                        </a>
+                                        <a href="signup.html"
+                                            class="an a1i aw[10px] a1j a1k hover:aR dark:aT dark:hover:aR lg:ak">
+                                            Registeration
+                                        </a>
+                                        <a href="support.html"
+                                            class="an a1i aw[10px] a1j a1k hover:aR dark:aT dark:hover:aR lg:ak">
+                                            Contact Us
+                                        </a>
+                                        <a href="faq.html"
+                                            class="an a1i aw[10px] a1j a1k hover:aR dark:aT dark:hover:aR lg:ak">
+                                            FAQ
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="aa ap a1l lg:a1m xl:a1n 2xl:a1o">
+                        <div class="a1p">
+                            <label for="darkToggler" class="aa a1q a1r a1s ac a1t a1u a1v dark:a1w[#1E2763]">
+                                <input type="checkbox" name="darkToggler" id="darkToggler" class="a1x"
+                                    aria-label="darkToggler" />
+                                <span class="aa a1y a1z ac a1t a1u a1A aT dark:a7 dark:aS">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" class="a1B">
+                                        <path
+                                            d="M4.50663 3.2267L3.30663 2.03337L2.36663 2.97337L3.55996 4.1667L4.50663 3.2267ZM2.66663 7.00003H0.666626V8.33337H2.66663V7.00003ZM8.66663 0.366699H7.33329V2.33337H8.66663V0.366699ZM13.6333 2.97337L12.6933 2.03337L11.5 3.2267L12.44 4.1667L13.6333 2.97337ZM11.4933 12.1067L12.6866 13.3067L13.6266 12.3667L12.4266 11.1734L11.4933 12.1067ZM13.3333 7.00003V8.33337H15.3333V7.00003H13.3333ZM7.99996 3.6667C5.79329 3.6667 3.99996 5.46003 3.99996 7.6667C3.99996 9.87337 5.79329 11.6667 7.99996 11.6667C10.2066 11.6667 12 9.87337 12 7.6667C12 5.46003 10.2066 3.6667 7.99996 3.6667ZM7.33329 14.9667H8.66663V13H7.33329V14.9667ZM2.36663 12.36L3.30663 13.3L4.49996 12.1L3.55996 11.16L2.36663 12.36Z" />
+                                    </svg>
+                                </span>
+                                <span class="aa a1y a1z ac a1t a1u a7 aQ dark:a1A dark:aT">
+                                    <svg width="13" height="15" viewBox="0 0 13 15" class="a1B">
+                                        <path
+                                            d="M10.6111 12.855C11.591 12.1394 12.3151 11.1979 12.7723 10.1623C10.4824 10.4065 8.1342 9.46314 6.67948 7.47109C5.22476 5.47905 5.04093 2.95516 5.97054 0.848179C4.84491 0.968503 3.72768 1.37162 2.74781 2.08719C-0.224105 4.25747 -0.874706 8.43084 1.29558 11.4028C3.46586 14.3747 7.63923 15.0253 10.6111 12.855Z" />
+                                    </svg>
+                                </span>
+                            </label>
+                        </div>
+                        <div class="ao sm:aa">
+                            <a href="signin.html"
+                                class="aa ac a1t a1u a1C a1D aw[9px] a1E a1F aP aQ a1G hover:a1H hover:a1A hover:aT dark:a1I dark:aT dark:hover:a1 dark:hover:aR lg:px-4 xl:px-8">
+                                Sign In
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="a1J[140px] a1K">
+        <div class="ae">
+            <div class="wow fadeInUp a3r a3K aH[630px] a2G md:a30" data-wow-delay="0.5s">
+                <h2 class="a2d a2o a1P a2p a1k dark:aT md:a2Q[45px]">
+                    Frequently Asked Questions
+                </h2>
+                <p class="a3r aH[590px] aO a1R aQ dark:aS">
+                    Some questions you might have about CryptoMine Investment company as a customer or a potential investor. Feel
+                    free to contact our company Live Support for further enquiries and informations.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" x-data="
+        {
+          openFaq1: false,
+          openFaq2: false,
+          openFaq3: false,
+          openFaq4: false,
+          openFaq5: false,
+          openFaq6: false,
+          openFaq7: false,
+          openFaq8: false,
+          openFaq9: false,
+          openFaq10: false,
+          openFaq11: false,
+          openFaq12: false,
+          openFaq13: false,
+        }
+      " class="af a2E a1v a4h dark:a1w[#14102C]">
+        <div class="ae">
+            <div class="ag aa a1L a1t">
+                <div class="ab ak lg:a2N/12 xl:a1z/12">
+                    <div class="single-faq wow fadeInUp a1W au a1 a2h a2W dark:a3 md:a3_ md:a2R" data-wow-delay="0.5s">
+                        <button @click="openFaq1 = !openFaq1" class="faq-btn aa ab ac ah a4l">
+                            <h3 class="a4m a1F a1P a2u dark:aT sm:aO md:a1O">
+                                How Do I Create My Account?
+                            </h3>
+                            <span class="icon aV a4n ab aH[20px] ac a1t a1i a4o aT dark:a1k dark:a2m aO aP"
+                                :class="openFaq1 && 'a4p' ">
+                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_50_132)">
+                                        <path
+                                            d="M8.82033 1.91065L4.99951 5.73146L1.17869 1.91064L-0.000488487 3.08978L4.99951 8.08978L9.99951 3.08979L8.82033 1.91065Z"
+                                            fill="currentColor" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_50_132">
+                                            <rect width="10" height="10" fill="white"
+                                                transform="translate(-0.000488281 0.000488281)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </span>
+                        </button>
+                        <div x-show="openFaq1" class="faq-content">
+                            <p class="a4q a4r a1F aQ dark:aS">
+                                Registration process is very easy and will take a few moments to complete. Simply navigate through the "Pages" button at the top menu options and click on "Registeration" or any "Get Started" button to fill in all the required fields.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="single-faq wow fadeInUp a1W au a1 a2h a2W dark:a3 md:a3_ md:a2R" data-wow-delay="0.5s">
+                        <button @click="openFaq2 = !openFaq2" class="faq-btn aa ab ac ah a4l">
+                            <h3 class="a4m a1F a1P a2u dark:aT sm:aO md:a1O">
+                                Who are Crypto Wind?
+                            </h3>
+                            <span class="icon aV a4n ab aH[20px] ac a1t a1i a4o aT dark:a1k dark:a2m aO aP"
+                                :class="openFaq2 && 'a4p' ">
+                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_50_132)">
+                                        <path
+                                            d="M8.82033 1.91065L4.99951 5.73146L1.17869 1.91064L-0.000488487 3.08978L4.99951 8.08978L9.99951 3.08979L8.82033 1.91065Z"
+                                            fill="currentColor" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_50_132">
+                                            <rect width="10" height="10" fill="white"
+                                                transform="translate(-0.000488281 0.000488281)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </span>
+                        </button>
+                        <div x-show="openFaq2" class="faq-content">
+                            <p class="a4q a4r a1F aQ dark:aS">
+                                Our Company www.cryptowind.com provides a full investment service, focused on Bitcoin trade and mining, forex trading, stock market trading, physical assets trading, and other cryptocurrency trading market.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="single-faq wow fadeInUp a1W au a1 a2h a2W dark:a3 md:a3_ md:a2R" data-wow-delay="0.5s">
+                        <button @click="openFaq3 = !openFaq3" class="faq-btn aa ab ac ah a4l">
+                            <h3 class="a4m a1F a1P a2u dark:aT sm:aO md:a1O">
+                                How do I benefit from Crypto Wind?
+                            </h3>
+                            <span class="icon aV a4n ab aH[20px] ac a1t a1i a4o aT dark:a1k dark:a2m aO aP"
+                                :class="openFaq3 && 'a4p' ">
+                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_50_132)">
+                                        <path
+                                            d="M8.82033 1.91065L4.99951 5.73146L1.17869 1.91064L-0.000488487 3.08978L4.99951 8.08978L9.99951 3.08979L8.82033 1.91065Z"
+                                            fill="currentColor" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_50_132">
+                                            <rect width="10" height="10" fill="white"
+                                                transform="translate(-0.000488281 0.000488281)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </span>
+                        </button>
+                        <div x-show="openFaq3" class="faq-content">
+                            <p class="a4q a4r a1F aQ dark:aS">
+                                First of all, you need to register an account, login if you already have an account, select an investment plan, make a deposit of the amount you want to invest and wait for the designated time frame to make profits. You can deposit and withdraw at anytime with the popular payment systems.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="single-faq wow fadeInUp a1W au a1 a2h a2W dark:a3 md:a3_ md:a2R" data-wow-delay="0.5s">
+                        <button @click="openFaq4 = !openFaq4" class="faq-btn aa ab ac ah a4l">
+                            <h3 class="a4m a1F a1P a2u dark:aT sm:aO md:a1O">
+                                How can I purchase Cryptocurrencies?
+                            </h3>
+                            <span class="icon aV a4n ab aH[20px] ac a1t a1i a4o aT dark:a1k dark:a2m aO aP"
+                                :class="openFaq4 && 'a4p' ">
+                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_50_132)">
+                                        <path
+                                            d="M8.82033 1.91065L4.99951 5.73146L1.17869 1.91064L-0.000488487 3.08978L4.99951 8.08978L9.99951 3.08979L8.82033 1.91065Z"
+                                            fill="currentColor" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_50_132">
+                                            <rect width="10" height="10" fill="white"
+                                                transform="translate(-0.000488281 0.000488281)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </span>
+                        </button>
+                        <div x-show="openFaq4" class="faq-content">
+                            <p class="a4q a4r a1F aQ dark:aS">
+                                There are many variations of exchange applications and websites available, but we advice you use the most popular exchanges like Binance, CoinDCX, KeepChange, TrustWallet, etc. You only need to register, verify your profile and purchase preffered crypto like USDT, Bitcoin, Ethereum, etc.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="single-faq wow fadeInUp a1W au a1 a2h a2W dark:a3 md:a3_ md:a2R" data-wow-delay="0.5s">
+                        <button @click="openFaq5 = !openFaq5" class="faq-btn aa ab ac ah a4l">
+                            <h3 class="a4m a1F a1P a2u dark:aT sm:aO md:a1O">
+                                Is Crypto Wind Officially Registered?
+                            </h3>
+                            <span class="icon aV a4n ab aH[20px] ac a1t a1i a4o aT dark:a1k dark:a2m aO aP" :class="openFaq5 && 'a4p' ">
+                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_50_132)">
+                                        <path
+                                            d="M8.82033 1.91065L4.99951 5.73146L1.17869 1.91064L-0.000488487 3.08978L4.99951 8.08978L9.99951 3.08979L8.82033 1.91065Z"
+                                            fill="currentColor" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_50_132">
+                                            <rect width="10" height="10" fill="white" transform="translate(-0.000488281 0.000488281)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </span>
+                        </button>
+                        <div x-show="openFaq5" class="faq-content">
+                            <p class="a4q a4r a1F aQ dark:aS">
+                                Yes, we are registered in the United States as "www.cryptowind.com" Registration number: 12489512. You can check more about our company details on the "About" page or at any of our physical addresses.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="single-faq wow fadeInUp a1W au a1 a2h a2W dark:a3 md:a3_ md:a2R" data-wow-delay="0.5s">
+                        <button @click="openFaq6 = !openFaq6" class="faq-btn aa ab ac ah a4l">
+                            <h3 class="a4m a1F a1P a2u dark:aT sm:aO md:a1O">
+                                Can I Have More Than One Account?
+                            </h3>
+                            <span class="icon aV a4n ab aH[20px] ac a1t a1i a4o aT dark:a1k dark:a2m aO aP" :class="openFaq6 && 'a4p' ">
+                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_50_132)">
+                                        <path
+                                            d="M8.82033 1.91065L4.99951 5.73146L1.17869 1.91064L-0.000488487 3.08978L4.99951 8.08978L9.99951 3.08979L8.82033 1.91065Z"
+                                            fill="currentColor" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_50_132">
+                                            <rect width="10" height="10" fill="white" transform="translate(-0.000488281 0.000488281)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </span>
+                        </button>
+                        <div x-show="openFaq6" class="faq-content">
+                            <p class="a4q a4r a1F aQ dark:aS">
+                                No, you can't have more than one account per user unless you were given a special admin permission to do so. If you are caught having more than one account, you are risking all your accounts and funds being suspended.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="single-faq wow fadeInUp a1W au a1 a2h a2W dark:a3 md:a3_ md:a2R" data-wow-delay="0.5s">
+                        <button @click="openFaq7 = !openFaq7" class="faq-btn aa ab ac ah a4l">
+                            <h3 class="a4m a1F a1P a2u dark:aT sm:aO md:a1O">
+                                How Many Times Can A User Make Deposits?
+                            </h3>
+                            <span class="icon aV a4n ab aH[20px] ac a1t a1i a4o aT dark:a1k dark:a2m aO aP" :class="openFaq7 && 'a4p' ">
+                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_50_132)">
+                                        <path
+                                            d="M8.82033 1.91065L4.99951 5.73146L1.17869 1.91064L-0.000488487 3.08978L4.99951 8.08978L9.99951 3.08979L8.82033 1.91065Z"
+                                            fill="currentColor" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_50_132">
+                                            <rect width="10" height="10" fill="white" transform="translate(-0.000488281 0.000488281)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </span>
+                        </button>
+                        <div x-show="openFaq7" class="faq-content">
+                            <p class="a4q a4r a1F aQ dark:aS">
+                                Since you are not allowed to have multiple accounts, a user can make deposits in their account as and when they want. There is no limitation on the number of deposits that a user can deposit.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="single-faq wow fadeInUp a1W au a1 a2h a2W dark:a3 md:a3_ md:a2R" data-wow-delay="0.5s">
+                        <button @click="openFaq8 = !openFaq8" class="faq-btn aa ab ac ah a4l">
+                            <h3 class="a4m a1F a1P a2u dark:aT sm:aO md:a1O">
+                                Which Payment Methods Can I Use To Make Deposit?
+                            </h3>
+                            <span class="icon aV a4n ab aH[20px] ac a1t a1i a4o aT dark:a1k dark:a2m aO aP" :class="openFaq8 && 'a4p' ">
+                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_50_132)">
+                                        <path
+                                            d="M8.82033 1.91065L4.99951 5.73146L1.17869 1.91064L-0.000488487 3.08978L4.99951 8.08978L9.99951 3.08979L8.82033 1.91065Z"
+                                            fill="currentColor" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_50_132">
+                                            <rect width="10" height="10" fill="white" transform="translate(-0.000488281 0.000488281)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </span>
+                        </button>
+                        <div x-show="openFaq8" class="faq-content">
+                            <p class="a4q a4r a1F aQ dark:aS">
+                                We accept: Bitcoin, Ethereum, USDT, Shiba, Dogecoin, and Tron.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="single-faq wow fadeInUp a1W au a1 a2h a2W dark:a3 md:a3_ md:a2R" data-wow-delay="0.5s">
+                        <button @click="openFaq9 = !openFaq9" class="faq-btn aa ab ac ah a4l">
+                            <h3 class="a4m a1F a1P a2u dark:aT sm:aO md:a1O">
+                                Can I Make Reinvestments?
+                            </h3>
+                            <span class="icon aV a4n ab aH[20px] ac a1t a1i a4o aT dark:a1k dark:a2m aO aP" :class="openFaq9 && 'a4p' ">
+                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_50_132)">
+                                        <path
+                                            d="M8.82033 1.91065L4.99951 5.73146L1.17869 1.91064L-0.000488487 3.08978L4.99951 8.08978L9.99951 3.08979L8.82033 1.91065Z"
+                                            fill="currentColor" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_50_132">
+                                            <rect width="10" height="10" fill="white" transform="translate(-0.000488281 0.000488281)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </span>
+                        </button>
+                        <div x-show="openFaq9" class="faq-content">
+                            <p class="a4q a4r a1F aQ dark:aS">
+                                Yes, you can reinvest from your dashboard account balance. However, we do not allow compounding of investments from your account balance.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="single-faq wow fadeInUp a1W au a1 a2h a2W dark:a3 md:a3_ md:a2R" data-wow-delay="0.5s">
+                        <button @click="openFaq10 = !openFaq10" class="faq-btn aa ab ac ah a4l">
+                            <h3 class="a4m a1F a1P a2u dark:aT sm:aO md:a1O">
+                                Are There Any Fees To Withdraw My Funds?
+                            </h3>
+                            <span class="icon aV a4n ab aH[20px] ac a1t a1i a4o aT dark:a1k dark:a2m aO aP" :class="openFaq10 && 'a4p' ">
+                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_50_132)">
+                                        <path
+                                            d="M8.82033 1.91065L4.99951 5.73146L1.17869 1.91064L-0.000488487 3.08978L4.99951 8.08978L9.99951 3.08979L8.82033 1.91065Z"
+                                            fill="currentColor" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_50_132">
+                                            <rect width="10" height="10" fill="white" transform="translate(-0.000488281 0.000488281)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </span>
+                        </button>
+                        <div x-show="openFaq10" class="faq-content">
+                            <p class="a4q a4r a1F aQ dark:aS">
+                                Payment system are always instant and there are no hidden fees or charges to withdraw your funds.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="single-faq wow fadeInUp a1W au a1 a2h a2W dark:a3 md:a3_ md:a2R" data-wow-delay="0.5s">
+                        <button @click="openFaq11 = !openFaq11" class="faq-btn aa ab ac ah a4l">
+                            <h3 class="a4m a1F a1P a2u dark:aT sm:aO md:a1O">
+                                Do You Have Any Affiliate Program?
+                            </h3>
+                            <span class="icon aV a4n ab aH[20px] ac a1t a1i a4o aT dark:a1k dark:a2m aO aP" :class="openFaq11 && 'a4p' ">
+                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_50_132)">
+                                        <path
+                                            d="M8.82033 1.91065L4.99951 5.73146L1.17869 1.91064L-0.000488487 3.08978L4.99951 8.08978L9.99951 3.08979L8.82033 1.91065Z"
+                                            fill="currentColor" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_50_132">
+                                            <rect width="10" height="10" fill="white" transform="translate(-0.000488281 0.000488281)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </span>
+                        </button>
+                        <div x-show="openFaq11" class="faq-content">
+                            <p class="a4q a4r a1F aQ dark:aS">
+                                Yes, you will get 5% referral commission when your downlines make a deposit. We also offer other bonuses from time-to-time.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="single-faq wow fadeInUp a1W au a1 a2h a2W dark:a3 md:a3_ md:a2R" data-wow-delay="0.5s">
+                        <button @click="openFaq12 = !openFaq12" class="faq-btn aa ab ac ah a4l">
+                            <h3 class="a4m a1F a1P a2u dark:aT sm:aO md:a1O">
+                                Can I Receive Referral Commissions Without Making Deposit?
+                            </h3>
+                            <span class="icon aV a4n ab aH[20px] ac a1t a1i a4o aT dark:a1k dark:a2m aO aP" :class="openFaq12 && 'a4p' ">
+                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_50_132)">
+                                        <path
+                                            d="M8.82033 1.91065L4.99951 5.73146L1.17869 1.91064L-0.000488487 3.08978L4.99951 8.08978L9.99951 3.08979L8.82033 1.91065Z"
+                                            fill="currentColor" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_50_132">
+                                            <rect width="10" height="10" fill="white" transform="translate(-0.000488281 0.000488281)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </span>
+                        </button>
+                        <div x-show="openFaq12" class="faq-content">
+                            <p class="a4q a4r a1F aQ dark:aS">
+                                Yes, you can get a referral commission without making a personal deposit on your own account, which can also be available for withdrawal.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="aq a1a a4s a2Z">
+            <img src="images/shapes/faq-shape-1.svg" alt="shape" />
+        </div>
+        <div class="aq a19 a4t a2Z">
+            <img src="images/shapes/faq-shape-2.svg" alt="shape" />
+        </div>
+    </section>  
+
+    <div class="aq a8 a1a a2Z">
+        <img src="images/shapes/footer-shape-2.svg" alt="shape" />
+    </div>
+    <div class="aq a2J a19 a2Z">
+        <img src="images/shapes/footer-shape-1.svg" alt="shape" />
+    </div>
+
+    <footer class="af a2E a1J[120px]">              
+        <div class="wow fadeInUp a36 a2l[#F3F4F4] a37 a2G dark:a2l[#2D2C4A]" data-wow-delay="0.5s">
+            <p class="a1F a1R a4u aQ dark:aS">
+                © Crypto Wind - All Rights Reserved, Crafted by
+                <a href="#" rel="noopenner nofollow" target="_blank" class="hover:aR">
+                AbsoluteDes</a>
+            </p>
+        </div>        
+    </footer>
+
+
+    <a x-show="scrolledFromTop" href="javascript:void(0)" name="scrollToTop" aria-label="scrollToTop"
+        class="hover:a38 back-to-top ad a39 a3a a3b a2I[999] aa a32 a33 ac a1t au a1A aT a3c a3d">
+        <span class="a10[6px] a3e a3f az a36 a3g a1I"></span>
+    </a>
+
+
+    <script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="js/apexcharts.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // ==== for menu scroll
+        const pageLink = document.querySelectorAll(".scroll-menu");
+
+        pageLink.forEach((elem) => {
+            elem.addEventListener("click", (e) => {
+                e.preventDefault();
+                document.querySelector(elem.getAttribute("href")).scrollIntoView({
+                    behavior: "smooth",
+                    offsetTop: 1 - 60,
+                });
+            });
+        });
+
+        // section menu active
+        function onScroll(event) {
+            const sections = document.querySelectorAll(".scroll-menu");
+            const scrollPos =
+                window.pageYOffset ||
+                document.documentElement.scrollTop ||
+                document.body.scrollTop;
+
+            for (let i = 0; i < sections.length; i++) {
+                const currLink = sections[i];
+                const val = currLink.getAttribute("href");
+                const refElement = document.querySelector(val);
+                const scrollTopMinus = scrollPos + 73;
+                if (
+                    refElement.offsetTop <= scrollTopMinus &&
+                    refElement.offsetTop + refElement.offsetHeight > scrollTopMinus
+                ) {
+                    document
+                        .querySelector(".scroll-menu")
+                        .classList.remove("dark:aT", "aR");
+                    currLink.classList.add("dark:aT", "aR");
+                } else {
+                    currLink.classList.remove("dark:aT", "aR");
+                }
+            }
+        }
+
+        window.document.addEventListener("scroll", onScroll);
+
+        // ====
+        var options = {
+            series: [73, 55, 38, 20],
+            chart: {
+                type: "donut",
+                width: 400,
+            },
+            colors: ["#2347B9", "#3363FF", "#8BA6FF", "#8696CA"],
+            legend: {
+                show: false,
+            },
+            stroke: {
+                show: false,
+            },
+            responsive: [
+                {
+                    breakpoint: 480,
+                    options: {
+                        chart: {
+                            width: 200,
+                        },
+                        legend: {
+                            position: "bottom",
+                        },
+                    },
+                },
+            ],
+        };
+
+        var chart = new ApexCharts(document.querySelector("#chart"), options);
+        chart.render();
+    </script>
+</body>
+
+</html>
